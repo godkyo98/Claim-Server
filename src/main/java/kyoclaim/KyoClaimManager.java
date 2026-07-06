@@ -9,11 +9,13 @@ import java.util.UUID;
 
 public class KyoClaimManager {
 
-  // Tìm xem Block này đang thuộc đất của ai bằng cách gọi State
+  // FIX CHÍ MẠNG: Hàm quét quyền bảo vệ đất phải lấy dữ liệu từ ổ cứng (KyoClaimState)
   public static ClaimData getClaimAt(MinecraftServer server, BlockPos pos) {
-    KyoClaimState state = KyoClaimState.getServerState(server);
+    KyoClaimState state = server.overworld().getDataStorage().computeIfAbsent(KyoClaimState.TYPE);
     for (ClaimData claim : state.claims.values()) {
-      if (claim.contains(pos)) return claim;
+      if (claim.contains(pos)) {
+        return claim;
+      }
     }
     return null;
   }

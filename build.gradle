@@ -8,6 +8,13 @@ group = project.maven_group
 
 repositories {
 	mavenLocal()
+	maven {
+		name = "Modrinth"
+		url = "https://api.modrinth.com/maven"
+		content {
+			includeGroup "maven.modrinth"
+		}
+		}
 	maven { url "https://maven.nucleoid.xyz/" }
 }
 

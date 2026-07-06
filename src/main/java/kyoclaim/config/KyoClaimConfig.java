@@ -24,14 +24,20 @@ public class KyoClaimConfig {
   public List<String> cmdSell = Arrays.asList("sell", "ban");
   public List<String> cmdTrust = Arrays.asList("trust", "themban", "add");
   public List<String> cmdUntrust = Arrays.asList("untrust", "duoiban", "kick");
+  public List<String> cmdInfo = Arrays.asList("info", "toado", "vitri");
+  // THÊM DÒNG NÀY ĐỂ TẠO LỆNH DỊCH CHUYỂN:
+  public List<String> cmdHome = Arrays.asList("home", "ve");
 
   // ==========================================
   // CẤU HÌNH THÔNG SỐ BẤT ĐỘNG SẢN
   // ==========================================
   public int baseRadius = 2;
-  public int basePrice = 1000;
+  public int basePrice = 5000;
   public int upgradeRadiusBoost = 1;
   public int baseUpgradePrice = 20000;
+
+  // THÊM DÒNG NÀY ĐỂ THU PHÍ DỊCH CHUYỂN:
+  public int homeTeleportPrice = 1000; // Tốn 200 Xu mỗi lần bay về nhà
 
   private static KyoClaimConfig instance;
 

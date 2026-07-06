@@ -22,7 +22,7 @@ public class KyoClaimManager {
 
   // Quét ranh giới
   public static boolean canPlaceOrUpgrade(MinecraftServer server, BlockPos center, int radius, UUID myUuid) {
-    KyoClaimState state = KyoClaimState.getServerState(server);
+    KyoClaimState state = server.overworld().getDataStorage().computeIfAbsent(KyoClaimState.TYPE);
     for (ClaimData claim : state.claims.values()) {
       if (claim.getOwner().equals(myUuid)) continue;
       if (claim.overlapsWith(center, radius)) return false;

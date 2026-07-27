@@ -319,7 +319,7 @@ public class KyoClaimCommand {
       }
 
       // ==========================================
-      // Sub-command: VỀ NHÀ (home) - ĐỒNG BỘ HOÀN HẢO
+      // Sub-command: VỀ NHÀ (home) - ĐỒNG BỘ HOÀN HẢO & XUYÊN DIMENSION
       // ==========================================
       for (String homeAlias : config.cmdHome) {
         mainCommand.then(Commands.literal(homeAlias).executes(context -> {
@@ -327,6 +327,7 @@ public class KyoClaimCommand {
           MinecraftServer server = context.getSource().getServer();
           UUID playerUuid = player.getUUID();
 
+          // Đọc ổ cứng ở Overworld (Nơi lưu dữ liệu gốc)
           KyoClaimState state = server.overworld().getDataStorage().computeIfAbsent(KyoClaimState.TYPE);
 
           if (!state.claims.containsKey(playerUuid)) {
@@ -349,12 +350,20 @@ public class KyoClaimCommand {
           double homeY = claim.getCenter().getY() + 1.0;
           double homeZ = claim.getCenter().getZ() + 0.5;
 
-          ServerLevel level = (ServerLevel) player.level();
-          level.sendParticles(ParticleTypes.CAMPFIRE_COSY_SMOKE, player.getX(), player.getY(), player.getZ(), 20, 0.5, 0.5, 0.5, 0.05);
-          player.teleportTo(level, homeX, homeY, homeZ, java.util.Set.of(), player.getYRot(), player.getXRot(), false);
-          level.sendParticles(ParticleTypes.TOTEM_OF_UNDYING, homeX, homeY + 1, homeZ, 30, 0.5, 0.5, 0.5, 0.5);
+          // Bắn khói ở vị trí cũ (Có thể là Nether hoặc The End)
+          ServerLevel currentLevel = (ServerLevel) player.level();
+          currentLevel.sendParticles(ParticleTypes.CAMPFIRE_COSY_SMOKE, player.getX(), player.getY(), player.getZ(), 20, 0.5, 0.5, 0.5, 0.05);
 
-          player.sendSystemMessage(Component.literal("§a🚕 Đã trừ §e" + taxiPrice + " Xu§a. Xe ôm đã đưa sếp về tới Đại Bản Doanh an toàn!"));
+          // 🔥 FIX CHÍ MẠNG: CHỐT CỨNG ĐIỂM ĐẾN LÀ OVERWORLD
+          ServerLevel overworld = server.overworld();
+
+          // Teleport xuyên không gian sang Overworld
+          player.teleportTo(overworld, homeX, homeY, homeZ, java.util.Set.of(), player.getYRot(), player.getXRot(), false);
+
+          // Bắn hạt chào mừng tại Overworld
+          overworld.sendParticles(ParticleTypes.TOTEM_OF_UNDYING, homeX, homeY + 1, homeZ, 30, 0.5, 0.5, 0.5, 0.5);
+
+          player.sendSystemMessage(Component.literal("§a🚕 Đã trừ §e" + taxiPrice + " Xu§a. Xe ôm đã đưa sếp từ xa xăm về tới Đại Bản Doanh an toàn!"));
           return 1;
         }));
       }

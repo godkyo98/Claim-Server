@@ -1,38 +1,66 @@
-🏰 KYO CLAIM - BẢO VỆ LÃNH THỔ TỐI THƯỢNG
-Dự án độc quyền thuộc hệ sinh thái TEA Server - Minecraft 26.2
+# 🏰 KYO CLAIM - BẢO VỆ LÃNH THỔ TỐI THƯỢNG
 
-Chào mừng anh em đến với kỷ nguyên sinh tồn mới! Đã qua rồi cái thời cắm cúi farm đồ rồi nơm nớp lo sợ "trẻ trâu" vào đập rương phá nhà. Với Kyo Claim, mỗi người chơi sẽ trở thành một Lãnh Chúa thực thụ, sở hữu Đại Bản Doanh bất khả xâm phạm!
+![Minecraft Version](https://img.shields.io/badge/Minecraft-26.3-2ea44f?style=for-the-badge&logo=minecraft)
+![Fabric Loader](https://img.shields.io/badge/Fabric%20Loader-0.19.5-dbd087?style=for-the-badge)
+![Mod Version](https://img.shields.io/badge/Version-1.0.5-blue?style=for-the-badge)
+![Platform](https://img.shields.io/badge/Fabric-Server--Side-E3C95A?style=for-the-badge)
 
-🌟 TÍNH NĂNG ĐỘT PHÁ
-Mua Đất & Xây Căn Cứ (Base-Building):
+Dự án Server-side độc quyền thuộc hệ sinh thái **TEA Server**, mang đến giải pháp quản lý và bảo hộ đất đai toàn diện, an toàn và tối ưu tài nguyên tuyệt đối mà **không yêu cầu cài đặt bất kỳ mod nào ở phía Client**.
 
-Không dùng cơ chế mua "Chunk" vuông vức nhàm chán. Kyo Claim thiết lập một Lõi Trung Tâm ngay tại vị trí bạn đứng.
+---
 
-Gõ /nha mua (hoặc /claim buy): Trừ ngay 5,000 Xu để lập Lõi. Mọi block trong bán kính bảo vệ đều trở thành "Thánh Địa" – kẻ lạ không thể đập phá, không thể mở rương!
+## 🌟 TÍNH NĂNG ĐỘT PHÁ
 
-Nâng Cấp Mở Rộng Lãnh Thổ:
+### 1. Mua Đất & Thiết Lập Thánh Địa (Base-Building)
+* **Khởi tạo theo bán kính tự do:** Không gò bó theo các "Chunk" vuông vức nhàm chán. Kyo Claim thiết lập một **Lõi Trung Tâm** ngay tại tọa độ bạn đang đứng.
+* **Bảo vệ toàn diện:** Sử dụng lệnh `/nha mua` (hoặc `/claim buy`) với chi phí cơ bản **5,000 Xu** để kích hoạt lõi bảo vệ. Mọi khối (block), rương đồ và thực thể trong phạm vi thánh địa đều được bảo vệ nghiêm ngặt trước hành vi đập phá hoặc trộm cắp từ người lạ.
 
-Nhà chật quá? Hãy gõ /nha nangcap. Bỏ ra 20,000 Xu, bán kính Lãnh thổ sẽ phình to ra, bao trọn cả trang trại và chuồng bò của bạn.
+### 2. Mở Rộng Quy Mô Lãnh Thổ
+* Mở rộng ranh giới dễ dàng bằng lệnh `/nha nangcap` (hoặc `/claim upgrade`) với chi phí **20,000 Xu**.
+* Bán kính bảo hộ lập tức mở rộng tức thì, bao trọn nông trại, kho báu và các công trình phụ trợ của bạn.
 
-Hiệu Ứng Vòm Sắt & Lưới Laser 3D:
+### 3. Vòm Hiệu Ứng & Lưới Laser 3D
+* **Hiển thị trực quan:** Khi mua đất, nâng cấp, hoặc gõ `/nha info` trong phạm vi lãnh thổ, máy chiếu ranh giới 3D sẽ tự động dựng khung trong **15 giây**.
+* **Đường biên sắc nét:** Hàng rào lửa (`FLAME`) bám sát bề mặt địa hình kết hợp cùng 4 cột laser ma thuật (`END_ROD`) dựng đứng tại 4 góc, giúp bạn và đồng đội xác định ranh giới một cách chuẩn xác.
 
-Bạn không biết đất nhà mình đến đâu? Bất cứ khi nào bạn mua, nâng cấp, hoặc gõ /nha info ở gần nhà, một Máy Chiếu 3D sẽ kích hoạt!
+### 4. Định Vị La Bàn GPS (Dẫn Đường Tức Thì)
+* Khi lạc đường ở khoảng cách xa, gõ `/nha info` để kích hoạt tia sao chổi rực rỡ bắn thẳng về hướng lãnh thổ kèm âm thanh ping định vị. Người chơi chỉ cần bám theo vệt sáng để tìm đường trở về căn cứ.
 
-Hàng rào lửa (FLAME) bo sát mặt đất kết hợp với 4 cột laser phép thuật (END_ROD) chọc thẳng lên trời ở 4 góc sẽ hiển thị rõ mồn một ranh giới nhà bạn trong 15 giây.
+### 5. Dịch Chuyển An Toàn Xuyên Chiều Không Gian ("Taxi Xe Ôm")
+* **Hồi quy Overworld an toàn:** Lệnh `/nha ve` (hoặc `/claim home`) với mức phí taxi **1,000 Xu** cho phép bạn dịch chuyển tức thì về thẳng đại bản doanh.
+* **Bảo vệ tuyệt đối:** Hệ thống luôn chủ động đọc trạng thái khu đất từ Thế giới thực (**Overworld**) và ép luồng dịch chuyển về Overworld an toàn, loại bỏ triệt để nguy cơ kẹt nhân vật hay lỗi vị trí khi kích hoạt từ Nether hoặc The End.
+* **Hiệu ứng kép:** Phát hiệu ứng hạt bốc hơi tại chiều không gian xuất phát và hiệu ứng pháo hoa đón chào rực rỡ tại điểm đến.
 
-Định Vị La Bàn GPS (Tính năng VIP):
+### 6. Quản Lý Quyền Hạn Đất Đai
+* `/nha trust <người chơi>`: Cấp quyền xây dựng, canh tác và mở rương cho bạn bè cùng sinh sống.
+* `/nha untrust <người chơi>`: Thu hồi quyền sử dụng đất ngay lập tức.
+* `/nha sell`: Thanh lý khu đất để thu hồi một phần vốn khi chuyển địa điểm sinh sống.
 
-Đi cày cuốc xa quá bị lạc? Đừng lo! Chỉ cần gõ /nha info khi ở xa, một Dải Sao Chổi rực rỡ sẽ bắn vút ra ngay trước mặt bạn, chỉ thẳng về hướng nhà kèm tiếng Ping định vị. Cứ đi theo ánh sáng là về đến nhà!
+---
 
-Dịch Chuyển Trực Tiếp - "Gọi Taxi Xe Ôm":
+## 💻 GÓC NHÌN DEVELOPER (Kiến Trúc Kỹ Thuật)
 
-Lười chạy bộ? Gõ /nha ve (hoặc /claim home). Trả 1,000 Xu phí Taxi, bạn sẽ bốc hơi trong một làn khói pháo hoa và xuất hiện chễm chệ ngay giữa Đại Bản Doanh của mình!
+* **100% Server-Side:** Toàn bộ hiệu ứng hạt 3D (Particle Engine), gói tin âm thanh (SoundPackets), và phép tính vector dẫn đường (Vector Math) được tính toán hoàn toàn trên CPU máy chủ và đồng bộ trực tiếp xuống Client vanilla.
+* **Lưu trữ Cố định Chuẩn Mới (`SavedDataType`):**
+  * Dữ liệu trạng thái đất đai được gắn trực tiếp vào hệ thống `server.overworld().getDataStorage()` qua `KyoClaimState.TYPE`.
+  * Tích hợp **Hybrid UUID Codec** (`STRING` $\leftrightarrow$ numeric UUID), đảm bảo khả năng tương thích ngược mượt mà với dữ liệu cũ trên đĩa mà không lo lỗi hỏng file lưu trữ.
+* **Tích Hợp KyoEconomy:** Kết nối chặt chẽ với hệ sinh thái **KyoEconomy (Modrinth Maven)**, cân bằng dòng tiền thông qua cơ chế đốt coin (sink) từ phí mua đất, nâng cấp và dịch chuyển.
 
-💻 GÓC NHÌN DEVELOPER (Công nghệ Đằng sau)
-Dự án này là minh chứng cho sự linh hoạt của hệ thống Server-side Modding trên Fabric 26.2:
+---
 
-Zero Client-Mod: Toàn bộ hiệu ứng hạt 3D (Particle), âm thanh (SoundPacket), và hệ thống định vị (Vector Math) được tính toán 100% trên Server và ép xuống Client. Người chơi không cần cài thêm bất kỳ mod nào!
+## ⚙️ CẤU HÌNH MẪU (`config/kyoclaim.json`)
 
-Bảo mật Dữ liệu Tuyệt đối: Sử dụng cấu trúc SavedData với RecordCodecBuilder mới nhất của Mojang. Dữ liệu "Sổ đỏ" được gắn chặt vào UUID và lưu thành file nhị phân .dat siêu nhẹ. Restart, Crash, hay Update server đều không bao giờ lo mất nhà.
-
-Kinh tế Tuần hoàn: Tích hợp sâu (Hard-hook) vào KyoEconomyAPI. Tiền tệ liên tục được luân chuyển và thu hồi (hút lạm phát) thông qua các tính năng mua đất, nâng cấp và gọi Taxi.
+```json
+{
+  "basePrice": 5000.0,
+  "upgradePrice": 20000.0,
+  "homeTeleportPrice": 1000.0,
+  "defaultRadius": 16,
+  "upgradeRadius": 32,
+  "cmdClaim": ["claim", "nha"],
+  "cmdInfo": ["info", "thongtin"],
+  "cmdHome": ["home", "ve"]
+}
+```
+---
+## Phát triển bởi Kyo — Dành riêng cho Kỷ nguyên TEA Server.
